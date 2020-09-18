@@ -38,7 +38,8 @@ let finish = false;
 $(document).ready(function(){
     displayCurrentQuestion();
     $(this).find('.message').hide();
-    $(this).find('.next').on('click', function(){
+    $(this).find('.result').hide();
+    $(this).find('.button').on('click', function(){
         if(!finish){
             value = $("input[type='radio']:checked").val();
             if(value == undefined){
@@ -46,21 +47,22 @@ $(document).ready(function(){
                 $(document).find('.message').show();
             }else{
                 $(document).find('.message').hide();
-                if(value === questions[currentQuestion].correctChoice){
+                if(value == questions[currentQuestion].correctChoice){
                     correctAnswers++;
                 }
                 currentQuestion++;
                 if(currentQuestion<questions.length){
                     displayCurrentQuestion();
                 }else{
+                    console.log(currentQuestion)
                     displayScore();
-                    $(document).find('.next').text('Play Again?');
+                    $(document).find('.button').text('Play Again?');
                     finish = true;
                 }
             }
         }else{
             finish = true;
-            $(document).find('.next').text('Next Question');
+            $(document).find('.button').text('Next Question');
             resetQuiz();
             displayCurrentQuestion();
             hideScore();
@@ -70,16 +72,16 @@ $(document).ready(function(){
 
 function displayCurrentQuestion(){
     let question = questions[currentQuestion].question;
-    let questionClass = $(document).find('container > .question');
-    let choiceList = $(document).find('container > .choice');
+    let questionClass = $(document).find('.question');
+    let choiceList = $(document).find('.choice');
     let numChoices = questions[currentQuestion].choices.length;
 
-    $(document).find('.question').text(question);
-    $(choice).find('li').remove();
+    $(questionClass).text(question);
+    $(choiceList).find('li').remove();
 
     let choice;
-    for(let i=0; i< numChoices; i++){
-        choice = question[currentQuestion].choices[i];
+    for(i=0; i< numChoices; i++){
+        choice = questions[currentQuestion].choices[i];
         $('<li><input type="radio" value=' + i + ' name="dynradio" />' + choice + '</li>').appendTo(choiceList);
     }
 }
@@ -91,7 +93,7 @@ function resetQuiz() {
 }
 
 function displayScore(){
-    $(document).find('.container > .result').text('You scored ' + correctAnswers);
+    $(document).find('.container > .result').text('You scored ' + correctAnswers + '/' + questions.length);
     $(document).find('.container > .result').show();
 }
 

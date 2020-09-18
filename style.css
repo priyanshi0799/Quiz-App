@@ -2,10 +2,13 @@ body{
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto Slab', serif; 
-    background: #f04f43;
+    background: #a063eb;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 3rem;
 }
 .container {
     display: flex;
@@ -15,19 +18,23 @@ body{
     align-items: center;
     background: #647a00;
     padding: 2rem;
-    margin-top: 14%;
     border-radius: 5px;
+    gap: 1rem;
 }
 
 h1{
-    color: #fff;
+    color: black;
     font-size: 2rem;
+    margin: 0;
+    text-decoration: underline;
 }
 
 input[type=radio]{
     border: 0px;
     width: 1.5rem;
     height: 2rem;
+    margin: 0;
+    cursor: pointer;
 }
 
 .button{
@@ -46,16 +53,43 @@ input[type=radio]{
 
 .question{
     font-size: 1.5rem;
+    color: #fff;
 }
 
 .message{
     font-size: 1rem;
+    background: #ed6f6f;
+    border: 1px solid red;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #e61010;
+}
+
+ul{
+    margin: 0;
 }
 
 .choice{
-    color: black;
+    color:#630f5c;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+li{
+    font-size: 1rem;
+    color:#4babde;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 0.5rem;
 }
 
 .result{
     font-size: 1rem;
+    background: #7fee83;
+    border: 1px solid #01f109;
+    padding: 1rem;
+    border-radius: 5px;
+    color: green;
 }
