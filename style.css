@@ -1,0 +1,61 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto Slab', serif; 
+    background: #f04f43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    background: #647a00;
+    padding: 2rem;
+    margin-top: 14%;
+    border-radius: 5px;
+}
+
+h1{
+    color: #fff;
+    font-size: 2rem;
+}
+
+input[type=radio]{
+    border: 0px;
+    width: 1.5rem;
+    height: 2rem;
+}
+
+.button{
+    border-radius: 5px;
+    width: 7rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #43007a;
+    color: #fff; 
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.question{
+    font-size: 1.5rem;
+}
+
+.message{
+    font-size: 1rem;
+}
+
+.choice{
+    color: black;
+}
+
+.result{
+    font-size: 1rem;
+}
