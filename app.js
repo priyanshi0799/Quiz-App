@@ -1,35 +1,56 @@
-let questions = [
-    {
-        question: 'What is the young buffalo called ?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-    {
-        question: 'What is the young buffalo called 2?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-    {
-        question: 'What is the young buffalo called 3?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-    {
-        question: 'What is the young buffalo called ?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-    {
-        question: 'What is the young buffalo called ?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-    {
-        question: 'What is the young buffalo called ?',
-        choices: ['calf' , 'baby' , 'puppy' , 'cow'],
-        correctChoice: 0
-    },
-]
+let questions = [{
+    question: "What is the baby of a Moth known as?",
+    choices: ["baby", "infant", "kit", "larva"],
+    correctChoice: 3
+}, {
+    question: "What is the adult of a kid called",
+    choices: ["calf", "doe", "goat", "chick"],
+    correctChoice: 2
+}, {
+    question: "What is the young of Bufallo called?",
+    choices: ["calf", "baby", "pup","cow"],
+    correctChoice: 0
+}, {
+    question: "What a baby Aligator called?",
+    choices: ["baby", "gator", "hatchling", "calf"],
+    correctChoice: 2
+}, {
+    question: "What is a baby Goose called?",
+    choices: ["gooser", "gosling", "gup", "pup"],
+    correctChoice: 1
+}, {
+    question: "What is a baby Hamster called?",
+    choices: ["pup", "chick", "infant", "billy"],
+    correctChoice: 0	
+	
+}, {
+    question: "What is a baby Hawk called?",
+    choices: ["hawklett", "pup", "larva", "eyas"],
+    correctChoice: 3	
+}, {
+    question: "What is a baby grasshopper called?",
+    choices: ["hopper", "nymph", "stick", "pup"],
+    correctChoice: 1
+}, {
+    question: "What is a baby Kangaroo called?",
+    choices: ["kinga", "joey", "calf", "baby"],
+    correctChoice: 1
+
+}, {
+    question: "What is a baby Whale called?",
+    choices: ["whala", "cub", "grub", "infant"],
+    correctChoice: 1
+
+}, {
+    question: "What is a baby Monkey called?",
+    choices: ["infant", "baby", "calf", "pup"],
+    correctChoice: 0
+
+	}, {
+    question: "What is a baby Bear Called?",
+    choices: ["cub", "baby balu", "young bear", "bearlet"],
+    correctChoice: 0
+}];
 
 let currentQuestion = 0;
 let correctAnswers = 0;
